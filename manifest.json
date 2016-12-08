@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Bias Meter",
+  "version": "1.0",
+  "description": "Shows a bias meter next to news in your Facebook feed.",
+  "author": "Andrew Faden",
+  "homepage_url": "http://faden.me/",
+  "icons": {
+    "16": "images/bias_icon_16.png",
+    "48": "images/bias_icon_48.png",
+    "128": "images/bias_icon_128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "css": ["style.css"],
+      "js": ["jquery-3.1.1.min.js","main.js"]
+    }
+  ],
+  "web_accessible_resources": [
+      "images/*.png"
+  ],
+  "permissions": [
+    "activeTab",
+    "https://unshorten.me/json/"
+  ]
+}

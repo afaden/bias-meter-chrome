@@ -1,0 +1,5 @@
+img.biasMeter {
+  z-index: 999;
+  position: relative;
+  padding-right: 2px;
+}
